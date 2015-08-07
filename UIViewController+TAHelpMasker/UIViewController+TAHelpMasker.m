@@ -11,17 +11,9 @@
 
 @interface TAHelpMasker : UIView
 
-+(void) show;
-
 @end
 
 @implementation TAHelpMasker
-
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    // Do any additional setup after loading the view.
-//}
-
 
 -(instancetype)init
 {
