@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>ECA7329E-7EC1-455E-BB75-75B8674BF119</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TAHelpMasker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5FE1C76A228F6A0B22FF0D3A3FE7BF39D3CC2A44</key>
+		<string>https://github.com/jiaopen/TAHelpMasker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TAHelpMasker.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5FE1C76A228F6A0B22FF0D3A3FE7BF39D3CC2A44</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jiaopen/TAHelpMasker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5FE1C76A228F6A0B22FF0D3A3FE7BF39D3CC2A44</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5FE1C76A228F6A0B22FF0D3A3FE7BF39D3CC2A44</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TAHelpMasker</string>
+		</dict>
+	</array>
+</dict>
+</plist>

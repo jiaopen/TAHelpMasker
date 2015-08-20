@@ -52,6 +52,22 @@
     [helpMakser show];
 }
 
++(void) dismiss
+{
+    NSEnumerator *frontToBackWindows = [UIApplication.sharedApplication.windows reverseObjectEnumerator];
+    UIScreen *mainScreen = UIScreen.mainScreen;
+    
+    for (UIWindow *window in frontToBackWindows)
+        if (window.screen == mainScreen && window.windowLevel == UIWindowLevelNormal) {
+            [window.subviews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                if([obj isKindOfClass:[TAHelpMasker class]])
+                {
+                    [obj performSelector:@selector(dismiss)];
+                }
+            }];
+        }
+}
+
 -(void)show{
     NSEnumerator *frontToBackWindows = [UIApplication.sharedApplication.windows reverseObjectEnumerator];
     UIScreen *mainScreen = UIScreen.mainScreen;
