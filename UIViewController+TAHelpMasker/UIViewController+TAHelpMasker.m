@@ -15,8 +15,7 @@
 
 @implementation TAHelpMasker
 
--(instancetype)init
-{
+- (instancetype)init{
     self = [super init];
     if (self) {
         
@@ -28,14 +27,12 @@
     return self;
 }
 
--(void) tap:(UIGestureRecognizer*) gesture
-{
+- (void) tap:(UIGestureRecognizer*) gesture{
     [self dismiss];
 }
 
 
-+(void)showWithImageName:(NSString*) imageName
-{
++ (void)showWithImageName:(NSString*) imageName{
     TAHelpMasker* helpMakser = [[self alloc] init];
     ;
     UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
@@ -52,8 +49,7 @@
     [helpMakser show];
 }
 
-+(void) dismiss
-{
++(void) dismiss{
     NSEnumerator *frontToBackWindows = [UIApplication.sharedApplication.windows reverseObjectEnumerator];
     UIScreen *mainScreen = UIScreen.mainScreen;
     
@@ -85,8 +81,7 @@
     }];
 }
 
--(void) dismiss
-{
+-(void) dismiss{
     [UIView animateWithDuration:0.3  animations:^{
         self.alpha = 0;
     } completion:^(BOOL finished) {
@@ -99,8 +94,7 @@
 @implementation UIViewController (TAHelpMasker)
 
 
-+ (void)load
-{
++ (void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class class = [self class];
@@ -128,7 +122,7 @@
     }
 }
 
--(void)displayMask
+- (void)displayMask
 {
     if (self.maskDictionary) {
         CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
@@ -159,8 +153,7 @@
     }
 }
 
-- (BOOL)displayMaskWhenViewDidAppear
-{
+- (BOOL)displayMaskWhenViewDidAppear{
     NSNumber *number = objc_getAssociatedObject(self, _cmd);
     if (number) {
         return number.boolValue;
@@ -169,19 +162,16 @@
     return YES;
 }
 
-- (void)setDisplayMaskWhenViewDidAppear:(BOOL)displayMaskWhenViewDidAppear
-{
+- (void)setDisplayMaskWhenViewDidAppear:(BOOL)displayMaskWhenViewDidAppear{
     objc_setAssociatedObject(self, @selector(displayMaskWhenViewDidAppear), @(displayMaskWhenViewDidAppear), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSString*)maskImageName
-{
+- (NSString*)maskImageName{
     NSString *imageName = objc_getAssociatedObject(self, _cmd);
     return imageName;
 }
 
-- (void)setMaskImageName:(NSString *)maskImageName
-{
+- (void)setMaskImageName:(NSString *)maskImageName{
     if (self.maskDictionary) {
         objc_setAssociatedObject(self, @selector(maskImageName), nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         return;
@@ -189,15 +179,13 @@
     objc_setAssociatedObject(self, @selector(maskImageName), maskImageName, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSDictionary*)maskDictionary
-{
+- (NSDictionary*)maskDictionary{
     NSDictionary *dic = objc_getAssociatedObject(self, _cmd);
     
     return dic;
 }
 
-- (void)setMaskDictionary:(NSDictionary *)maskDictionary
-{
+- (void)setMaskDictionary:(NSDictionary *)maskDictionary{
     if (maskDictionary) {
         self.maskImageName = nil;
     }
